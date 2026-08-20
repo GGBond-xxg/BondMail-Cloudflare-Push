@@ -1,3 +1,7 @@
 node_modules/
 .wrangler/
-wrangler.jsonc
+google-services.json
+firebase-adminsdk*.json
+service-account*.json
+.dev.vars
+.env

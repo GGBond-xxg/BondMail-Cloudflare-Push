@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "deploy": "wrangler deploy",
-    "migrate:remote": "wrangler d1 migrations apply bondmail-push-db --remote"
+    "check:config": "node scripts/check-config.mjs",
+    "firebase:client-config": "node scripts/firebase-client-config.mjs",
+    "deploy": "npm run check:config && wrangler deploy",
+    "migrate:remote": "npm run check:config && wrangler d1 migrations apply bondmail-push-db --remote"
   },
   "devDependencies": {
     "wrangler": "^4.118.0"
